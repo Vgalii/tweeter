@@ -1,0 +1,26 @@
+nav {
+  display:flex;
+  justify-content: space-between;
+  background-color: #4056A1;
+  height: 120px;
+  width: 100%;
+  padding: 1.5em;
+  position:fixed;
+  z-index: 1;
+
+}
+nav span {
+  font-family: "Bungee", cursive;
+  color: #FFFFFF
+}
+.message {
+  display:flex;
+  flex-direction: column;
+}
+.message span {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.fa-angle-double-down {
+  color: red;
+  margin-left: 3em;
+}

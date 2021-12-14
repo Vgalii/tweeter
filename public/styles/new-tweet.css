@@ -1,0 +1,34 @@
+.new-tweet {
+  margin: 2em;
+  padding: 0px 8px 40px 8px;
+  background-color: #ccc8c8;
+}
+
+.counter {
+  
+  font-size: 1em;
+  /* line-height: 3; */
+  font-family: "Bungee", cursive;
+  color: rgb(62, 57, 57)
+
+}
+.add-tweet {
+  background-color: #4056A1;
+  font-family: "Bungee", cursive;
+  color: #FFFFFF;
+  
+}
+.enter-text {
+  display: flex;
+  flex-direction: column;
+}
+.button-counter {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#tweet-text {
+  border: none;
+ border-bottom: solid;
+ background-color: #ccc8c8;
+}
