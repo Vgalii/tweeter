@@ -7,7 +7,6 @@
 .counter {
   
   font-size: 1em;
-  /* line-height: 3; */
   font-family: "Bungee", cursive;
   color: rgb(62, 57, 57)
 
@@ -31,4 +30,58 @@
   border: none;
  border-bottom: solid;
  background-color: #ccc8c8;
+}
+/* adding new tweets */
+article {
+  display: flex;
+  flex-direction: column;
+
+  height: 250px;
+  margin: 2em;
+  border: 3px solid  rgb(62, 57, 57);
+  
+}
+article:hover {
+  box-shadow: 5px 10px #888888;
+}
+article header {
+  flex-direction: row;
+  justify-content: start;
+  justify-content: space-between;
+
+}
+article header i {
+  padding-left: 25px;
+}
+article header h4 {
+  padding-left: 25px;
+  flex-grow: 2;
+}
+article header div {
+  padding-right: 25px;
+}
+article p {
+  padding-left: 25px;
+  border-bottom: solid;
+  
+}
+article footer h6 {
+  padding-left: 0;
+  margin: 0;
+  margin-right: auto;
+}
+.icons:hover {
+  
+  opacity: .5;
+  
+}
+.icons{
+  display: flex;
+  align-content: flex-end;
+  flex-direction: row;
+}
+article footer {
+  display: flex;
+  align-items: center;
+  margin: 5px;
 }
