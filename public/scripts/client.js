@@ -38,7 +38,11 @@ const renderTweets = function(tweets) {
   }
   
 }
-
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 //returns a tweet element with corresponding HTML structure
 const createTweetElement = function(tweetData){
   const $tweet = $(`<article>
@@ -47,7 +51,7 @@ const createTweetElement = function(tweetData){
     <h4>${tweetData.user.name}</h4>
     <div>${tweetData.user.handle}</div>
   </header>
-  <p>${tweetData.content.text}</p>
+  <p>${escape(tweetData.content.text)}</p>
   <footer>
     <h6>${timeago.format(tweetData.created_at)}</h6>
     <div class="icons">
@@ -69,10 +73,10 @@ $(document).ready(function(){
     const $message = $("#tweet-text").val()
     console.log($message)
     if ($message === null || $message === "") {
-      $(".error-message").text("🛑Your message is too short!🛑")
+      $(".error-message").text("🛑Your message is too short!🛑").slideDown(400).slideUp(5000);
       return;
     } else if ($message.length > 140) {
-      $(".error-message").text("🛑Your message is too long!🛑");
+      $(".error-message").text("🛑Your message is too long!🛑").slideDown(400).slideUp(5000);
       return;
     }
     
