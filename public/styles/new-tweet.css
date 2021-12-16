@@ -85,3 +85,9 @@ article footer {
   align-items: center;
   margin: 5px;
 }
+.error-message {
+  display: flex;
+  justify-content: center;
+  color:  red;
+  font-weight: 600;
+}

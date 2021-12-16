@@ -69,10 +69,10 @@ $(document).ready(function(){
     const $message = $("#tweet-text").val()
     console.log($message)
     if ($message === null || $message === "") {
-      $(".error-message").text("Your message is too short")
+      $(".error-message").text("🛑Your message is too short!🛑")
       return;
     } else if ($message.length > 140) {
-      $(".error-message").text("Your message is too long!");
+      $(".error-message").text("🛑Your message is too long!🛑");
       return;
     }
     
