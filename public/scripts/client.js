@@ -3,30 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
+
 const renderTweets = function(tweets) {
   // loops through tweets
   for (let users of tweets) {
@@ -37,14 +14,14 @@ const renderTweets = function(tweets) {
     $('#tweets-container').prepend($tweet);
   }
   
-}
-const escape = function (str) {
+};
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 //returns a tweet element with corresponding HTML structure
-const createTweetElement = function(tweetData){
+const createTweetElement = function(tweetData) {
   const $tweet = $(`<article>
   <header>
     <img src = "${tweetData.user.avatars}">
@@ -61,17 +38,17 @@ const createTweetElement = function(tweetData){
     </div>
   </footer>
 </article>`);
-return $tweet;
+  return $tweet;
 }
 
-$(document).ready(function(){
+$(document).ready(function() {
   $("form.tweet-form").on("submit", function(event) {
     event.preventDefault();
-    $(".error-message").text("")
+    $(".error-message").text("");
     const $data = $(this).serialize();
     
-    const $message = $("#tweet-text").val()
-    console.log($message)
+    const $message = $("#tweet-text").val();
+    console.log($message);
     if ($message === null || $message === "") {
       $(".error-message").text("🛑Your message is too short!🛑").slideDown(400).slideUp(5000);
       return;
@@ -82,19 +59,18 @@ $(document).ready(function(){
     
     $.post("/tweets", $data)
       .then(() => {
-        console.log("this is a message")
-        $("#tweet-text").val("")
+        $("#tweet-text").val("");
         loadTweets();
-      })
-  })
+      });
+  });
   
-  function loadTweets(){
+  function loadTweets() {
     $.get("/tweets")
-    .then((data) => {
-      renderTweets(data);
+      .then((data) => {
+        renderTweets(data);
       
-    })
+      });
   }
   loadTweets();
-})
+});
 
