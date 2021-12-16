@@ -63,11 +63,24 @@ return $tweet;
 $(document).ready(function(){
   $("form.tweet-form").on("submit", function(event) {
     event.preventDefault();
+    $(".error-message").text("")
     const $data = $(this).serialize();
-    console.log($data);
+    
+    const $message = $("#tweet-text").val()
+    console.log($message)
+    if ($message === null || $message === "") {
+      $(".error-message").text("Your message is too short")
+      return;
+    } else if ($message.length > 140) {
+      $(".error-message").text("Your message is too long!");
+      return;
+    }
+    
     $.post("/tweets", $data)
       .then(() => {
         console.log("this is a message")
+        $("#tweet-text").val("")
+        loadTweets();
       })
   })
   
