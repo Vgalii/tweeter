@@ -24,3 +24,19 @@ nav span {
   color: red;
   margin-left: 3em;
 }
+
+@media only screen and (min-width: 1024px){
+  .avatar {
+    width: 35%;
+    float:left;
+  }
+  nav {
+    top: 0px
+  }
+  #compose-tweet {
+    margin-top: 120px;
+    margin-left: 400px;
+    
+  }
+  
+}
