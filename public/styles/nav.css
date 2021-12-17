@@ -13,6 +13,12 @@ nav span {
   font-family: "Bungee", cursive;
   color: #FFFFFF
 }
+#compose-button {
+  background-color: #4056A1 ;
+}
+.fa-angle-double-down{
+  padding-right: 65px;
+}
 .message {
   display:flex;
   flex-direction: column;
