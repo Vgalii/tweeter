@@ -60,6 +60,7 @@ $(document).ready(function() {
     $.post("/tweets", $data)
       .then(() => {
         $("#tweet-text").val("");
+        $(".counter").text("140");
         loadTweets();
       });
   });
