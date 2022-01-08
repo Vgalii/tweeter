@@ -7,27 +7,31 @@
   font-size: 1em;
   font-family: "Bungee", cursive;
   color: rgb(62, 57, 57)
-
 }
+
 .add-tweet {
   background-color: #4056A1;
   font-family: "Bungee", cursive;
   color: #FFFFFF;
 }
+
 .enter-text {
   display: flex;
   flex-direction: column;
 }
+
 .button-counter {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
 }
+
 #tweet-text {
   border: none;
   border-bottom: solid;
   background-color: #f4f1ec;
 }
+
 /* adding new tweets */
 article {
   display: flex;
@@ -35,30 +39,32 @@ article {
   height: 280px;
   margin: 2em;
   border: 3px solid  rgb(62, 57, 57);
-  
 }
 article:hover {
   box-shadow: 5px 10px #4056A1;
 }
+
 article header {
   flex-direction: row;
   justify-content: start;
   justify-content: space-between;
 }
+
 article header i {
   padding-left: 25px;
 }
+
 article header h4 {
   padding-left: 25px;
   flex-grow: 2;
 }
+
 article header div {
   padding-right: 25px;
 }
 article p {
   padding-left: 25px;
   border-bottom: solid;
-  
 }
 article footer h6 {
   padding-left: 0;
@@ -74,11 +80,13 @@ article footer h6 {
   align-content: flex-end;
   flex-direction: row;
 }
+
 article footer {
   display: flex;
   align-items: center;
   margin: 5px;
 }
+
 .error-message {
   display: flex;
   justify-content: center;
@@ -91,5 +99,4 @@ article footer {
     width: 60%;
     float: right;
   }
-  
 }

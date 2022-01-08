@@ -5,9 +5,10 @@
  */
 
 const renderTweets = function(tweets) {
-  // loops through tweets
+  // clear existing tweets
+  $("#tweets-container").empty();
+
   for (let users of tweets) {
-    // calls createTweetElement for each tweet
     const $tweet = createTweetElement(users);
     
     // takes return value and appends it to the tweets container
